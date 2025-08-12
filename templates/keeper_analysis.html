@@ -1,0 +1,206 @@
+{% extends "base.html" %}
+
+{% block title %}Keeper Analysis - LOL Keepers{% endblock %}
+
+{% block content %}
+<div style="margin-bottom: 1rem;">
+    <label for="filterSelect" style="margin-right: 0.5rem; font-weight: bold;">Filter:</label>
+    <select id="filterSelect" style="padding: 8px; border-radius: 4px; border: 1px solid #ddd;">
+        <option value="all">All Players</option>
+        <option value="keepers">2024 Keepers</option>
+        <option value="eligible">2025 Eligible Keepers</option>
+        <option value="valuable">Valuable Options</option>
+    </select>
+    
+    <label for="managerFilter" style="margin-left: 2rem; margin-right: 0.5rem; font-weight: bold;">Manager:</label>
+    <select id="managerFilter" style="padding: 8px; border-radius: 4px; border: 1px solid #ddd;">
+        <option value="all">All Managers</option>
+        {% for manager in managers %}
+        <option value="{{ manager }}">{{ manager }}</option>
+        {% endfor %}
+    </select>
+    
+    <label for="searchInput" style="margin-left: 2rem; margin-right: 0.5rem; font-weight: bold;">Search:</label>
+    <input type="text" id="searchInput" placeholder="Search players or managers..." style="padding: 8px; border-radius: 4px; border: 1px solid #ddd; width: 200px;">
+</div>
+
+<div class="card">
+    <div style="overflow-x: auto;">
+        <table id="keeperTable">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)" title="Click to sort">Player Name</th>
+                    <th onclick="sortTable(1)" title="Click to sort">2024 Manager</th>
+                    <th onclick="sortTable(2)" title="Click to sort">2024 Round</th>
+                    <th onclick="sortTable(3)" title="Click to sort">2024 Pick</th>
+                    <th onclick="sortTable(4)" title="Click to sort">2025 Rank</th>
+                    <th onclick="sortTable(5)" title="Click to sort">2025 Position</th>
+                    <th onclick="sortTable(6)" title="Click to sort">2025 Proj Round</th>
+                    <th onclick="sortTable(7)" title="Click to sort">Keeper Round</th>
+                    <th onclick="sortTable(8)" title="Click to sort">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for player in players %}
+                <tr class="player-row" 
+                    data-keeper="{{ player['2024_keeper_status'] }}"
+                    data-eligible="{{ player['2025_keeper_eligible'] }}"
+                    data-valuable="{{ (player['2025_projected_draft_round'] or 0) > (player['2025_keeper_round'] or 0) }}">
+                    <td>
+                        {% if not player['2025_keeper_eligible'] %}
+                            <strong class="ineligible-player" title="This player cannot be kept in 2025">{{ player.player_name }}</strong>
+                        {% else %}
+                            <strong>{{ player.player_name }}</strong>
+                        {% endif %}
+                        {% if player['2024_keeper_status'] %}
+                            <span class="keeper-badge" title="2024 Keeper">K</span>
+                        {% endif %}
+                    </td>
+                    <td>{{ player['2024_manager'] }}</td>
+                    <td>{{ player['2024_draft_round'] }}</td>
+                    <td>{{ player['2024_overall_pick'] }}</td>
+                    <td>
+                        {% if player['2025_draft_rank'] %}
+                            #{{ "%.0f"|format(player['2025_draft_rank']) }}
+                        {% else %}
+                            <span style="color: #999;">N/A</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if player['2025_position_rank'] %}
+                            <span class="position-rank">{{ player['2025_position_rank'] }}</span>
+                        {% else %}
+                            <span style="color: #999;">N/A</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if player['2025_projected_draft_round'] %}
+                            R{{ "%.0f"|format(player['2025_projected_draft_round']) }}
+                        {% else %}
+                            <span style="color: #999;">N/A</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if player['2025_keeper_eligible'] %}
+                            R{{ player['2025_keeper_round'] }}
+                        {% else %}
+                            <span style="color: #999;">N/A</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if player['2025_keeper_eligible'] and player['2025_projected_draft_round'] and player['2025_keeper_round'] %}
+                            {% set value = player['2025_keeper_round'] - player['2025_projected_draft_round'] %}
+                            {% if value > 0 %}
+                                <span style="color: #28a745; font-weight: bold;">+{{ "%.0f"|format(value) }}</span>
+                            {% elif value < 0 %}
+                                <span style="color: #dc3545; font-weight: bold;">{{ "%.0f"|format(value) }}</span>
+                            {% else %}
+                                <span style="color: #6c757d;">0</span>
+                            {% endif %}
+                        {% else %}
+                            <span style="color: #999;">N/A</span>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    let sortDirection = {};
+    
+    function sortTable(columnIndex) {
+        const table = document.getElementById('keeperTable');
+        const tbody = table.tBodies[0];
+        const rows = Array.from(tbody.querySelectorAll('tr'));
+        
+        // Toggle sort direction
+        sortDirection[columnIndex] = !sortDirection[columnIndex];
+        const ascending = sortDirection[columnIndex];
+        
+        rows.sort((a, b) => {
+            const aVal = a.cells[columnIndex].textContent.trim();
+            const bVal = b.cells[columnIndex].textContent.trim();
+            
+            // Handle numeric columns
+            if (columnIndex === 2 || columnIndex === 3 || columnIndex === 4 || columnIndex === 6 || columnIndex === 7 || columnIndex === 8) {
+                const aNum = parseFloat(aVal.replace(/[^-\d.]/g, '')) || -999;
+                const bNum = parseFloat(bVal.replace(/[^-\d.]/g, '')) || -999;
+                return ascending ? aNum - bNum : bNum - aNum;
+            }
+            
+            // Handle text columns
+            return ascending ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+        });
+        
+        // Re-append sorted rows
+        rows.forEach(row => tbody.appendChild(row));
+        
+        // Update header to show sort direction
+        const headers = table.querySelectorAll('th');
+        headers.forEach((header, index) => {
+            header.style.background = index === columnIndex 
+                ? (ascending ? 'linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%)' : 'linear-gradient(135deg, #4c51bf 0%, #553c9a 100%)')
+                : 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+        });
+    }
+    
+    function filterTable() {
+        const filterValue = document.getElementById('filterSelect').value;
+        const managerValue = document.getElementById('managerFilter').value;
+        const searchValue = document.getElementById('searchInput').value.toLowerCase();
+        const rows = document.querySelectorAll('.player-row');
+        
+        rows.forEach(row => {
+            let showRow = true;
+            
+            // Apply status filter
+            if (filterValue === 'keepers' && row.dataset.keeper === 'False') {
+                showRow = false;
+            } else if (filterValue === 'eligible' && (row.dataset.keeper === 'False' || row.dataset.eligible === 'False')) {
+                showRow = false;
+            } else if (filterValue === 'valuable') {
+                // For valuable keepers: must be 2025 eligible and have positive value
+                if (row.dataset.eligible === 'False') {
+                    showRow = false;
+                } else {
+                    // Check if the Value column (index 8) has a positive number
+                    const valueCell = row.cells[8].textContent.trim();
+                    const valueMatch = valueCell.match(/^[+-]?\d+$/);
+                    const value = valueMatch ? parseInt(valueMatch[0]) : 0;
+                    if (value <= 0) {
+                        showRow = false;
+                    }
+                }
+            }
+            
+            // Apply manager filter
+            if (showRow && managerValue !== 'all') {
+                const managerName = row.cells[1].textContent.trim();
+                showRow = managerName === managerValue;
+            }
+            
+            // Apply search
+            if (showRow && searchValue) {
+                const playerName = row.cells[0].textContent.toLowerCase();
+                const managerName = row.cells[1].textContent.toLowerCase();
+                showRow = playerName.includes(searchValue) || managerName.includes(searchValue);
+            }
+            
+            row.style.display = showRow ? '' : 'none';
+        });
+    }
+    
+    // Add event listeners
+    document.getElementById('filterSelect').addEventListener('change', filterTable);
+    document.getElementById('managerFilter').addEventListener('change', filterTable);
+    document.getElementById('searchInput').addEventListener('input', filterTable);
+    
+    // Initial sort by 2024 overall pick
+    sortTable(3);
+</script>
+{% endblock %}

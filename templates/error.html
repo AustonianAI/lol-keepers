@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Error - LOL Keepers{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="error">
+        <h2>❌ Error</h2>
+        <p>{{ error_message }}</p>
+        
+        <div style="margin-top: 1rem;">
+            <a href="/" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px;">
+                🏠 Return Home
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
