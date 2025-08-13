@@ -43,10 +43,11 @@ def create_keeper_analysis_dataframe():
             draft_records.append({
                 'player_name': pick['player_name'],
                 '2024_manager': manager_name,
-                '2024_draft_round': pick['round'],
-                '2024_overall_pick': pick['overall_pick'],
+                '2024_draft_round': pick.get('round'),
+                '2024_overall_pick': pick.get('overall_pick'),
                 '2024_keeper_status': pick['keeper_status'],
-                '2025_keeper_eligible': pick.get('2025_keeper_eligible', True)
+                '2025_keeper_eligible': pick.get('2025_keeper_eligible', True),
+                'waiver_pickup': pick.get('waiver_pickup', False)
             })
 
         draft_df = pd.DataFrame(draft_records)
@@ -76,10 +77,16 @@ def create_keeper_analysis_dataframe():
             lambda x: math.ceil(x / 12) if pd.notna(x) else None
         )
 
-        # 2025 keeper round (2024 round - 1, minimum of 1)
-        merged_df['2025_keeper_round'] = merged_df['2024_draft_round'].apply(
-            lambda x: max(1, x - 1) if pd.notna(x) else None
-        )
+        # 2025 keeper round (2024 round - 1, minimum of 1, or round 5 for waiver pickups)
+        def calculate_keeper_round(row):
+            if row['waiver_pickup']:
+                return 5  # Waiver pickups get keeper round 5
+            elif pd.notna(row['2024_draft_round']):
+                return max(1, row['2024_draft_round'] - 1)  # Drafted players: round - 1, minimum 1
+            else:
+                return None  # No draft round and not waiver pickup
+
+        merged_df['2025_keeper_round'] = merged_df.apply(calculate_keeper_round, axis=1)
 
         # Select and order the final columns
         final_columns = [
@@ -92,7 +99,8 @@ def create_keeper_analysis_dataframe():
             '2025_draft_rank',
             '2025_position_rank',
             '2025_projected_draft_round',
-            '2025_keeper_round'
+            '2025_keeper_round',
+            'waiver_pickup'
         ]
 
         result_df = merged_df[final_columns].copy()
@@ -441,6 +449,8 @@ def keeper_analysis_web():
                                    error_message="Failed to load data. Please check that data files exist.")
 
         # Convert DataFrame to list of dictionaries for template
+        # Replace NaN with None so template can handle properly
+        df = df.where(pd.notna(df), None)
         players_data = df.to_dict('records')
 
         # Get unique managers for filter dropdown

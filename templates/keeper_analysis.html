@@ -3,41 +3,59 @@
 {% block title %}Keeper Analysis - LOL Keepers{% endblock %}
 
 {% block content %}
-<div style="margin-bottom: 1rem;">
-    <label for="filterSelect" style="margin-right: 0.5rem; font-weight: bold;">Filter:</label>
-    <select id="filterSelect" style="padding: 8px; border-radius: 4px; border: 1px solid #ddd;">
-        <option value="all">All Players</option>
-        <option value="keepers">2024 Keepers</option>
-        <option value="eligible">2025 Eligible Keepers</option>
-        <option value="valuable">Valuable Options</option>
-    </select>
+<div class="filter-container" style="margin-bottom: 1rem;">
+    <div class="filter-row">
+        <label for="filterSelect" style="margin-right: 0.5rem; font-weight: bold;">Filter:</label>
+        <select id="filterSelect" style="padding: 8px; border-radius: 4px; border: 1px solid #ddd;">
+            <option value="all">All Players</option>
+            <option value="keepers">2024 Keepers</option>
+            <option value="eligible">2025 Eligible Keepers</option>
+            <option value="valuable">Valuable Options</option>
+        </select>
+    </div>
     
-    <label for="managerFilter" style="margin-left: 2rem; margin-right: 0.5rem; font-weight: bold;">Manager:</label>
-    <select id="managerFilter" style="padding: 8px; border-radius: 4px; border: 1px solid #ddd;">
-        <option value="all">All Managers</option>
-        {% for manager in managers %}
-        <option value="{{ manager }}">{{ manager }}</option>
-        {% endfor %}
-    </select>
+    <div class="filter-row">
+        <label for="managerFilter" style="margin-right: 0.5rem; font-weight: bold;">Manager:</label>
+        <select id="managerFilter" style="padding: 8px; border-radius: 4px; border: 1px solid #ddd;">
+            <option value="all">All Managers</option>
+            {% for manager in managers %}
+            <option value="{{ manager }}">{{ manager }}</option>
+            {% endfor %}
+        </select>
+    </div>
     
-    <label for="searchInput" style="margin-left: 2rem; margin-right: 0.5rem; font-weight: bold;">Search:</label>
-    <input type="text" id="searchInput" placeholder="Search players or managers..." style="padding: 8px; border-radius: 4px; border: 1px solid #ddd; width: 200px;">
+    <div class="filter-row">
+        <label for="positionFilter" style="margin-right: 0.5rem; font-weight: bold;">Position:</label>
+        <select id="positionFilter" style="padding: 8px; border-radius: 4px; border: 1px solid #ddd;">
+            <option value="all">All Positions</option>
+            <option value="QB">Quarterback</option>
+            <option value="RB">Running Back</option>
+            <option value="WR">Wide Receiver</option>
+            <option value="TE">Tight End</option>
+        </select>
+    </div>
+    
+    <div class="filter-row">
+        <label for="searchInput" style="margin-right: 0.5rem; font-weight: bold;">Search:</label>
+        <input type="text" id="searchInput" placeholder="Search players or managers..." style="padding: 8px; border-radius: 4px; border: 1px solid #ddd; width: 200px;">
+    </div>
 </div>
 
 <div class="card">
-    <div style="overflow-x: auto;">
+    <div class="table-container" style="overflow-x: auto;">
         <table id="keeperTable">
             <thead>
                 <tr>
-                    <th onclick="sortTable(0)" title="Click to sort">Player Name</th>
-                    <th onclick="sortTable(1)" title="Click to sort">2024 Manager</th>
-                    <th onclick="sortTable(2)" title="Click to sort">2024 Round</th>
-                    <th onclick="sortTable(3)" title="Click to sort">2024 Pick</th>
-                    <th onclick="sortTable(4)" title="Click to sort">2025 Rank</th>
-                    <th onclick="sortTable(5)" title="Click to sort">2025 Position</th>
-                    <th onclick="sortTable(6)" title="Click to sort">2025 Proj Round</th>
-                    <th onclick="sortTable(7)" title="Click to sort">Keeper Round</th>
-                    <th onclick="sortTable(8)" title="Click to sort">Value</th>
+                    <th onclick="sortTable(0)" title="Click to sort">2025 Rank</th>
+                    <th onclick="sortTable(1)" title="Click to sort">Player Name</th>
+                    <th onclick="sortTable(2)" title="Click to sort">2024 Manager</th>
+                    <th onclick="sortTable(3)" title="Click to sort" class="mobile-hidden">2024 Round</th>
+                    <th onclick="sortTable(4)" title="Click to sort" style="display: none;">2024 Pick</th>
+                    <th onclick="sortTable(5)" title="Click to sort" class="mobile-hidden">2025 Position</th>
+                    <th onclick="sortTable(6)" title="Click to sort"><span class="compact-header">Proj Rd</span><span class="desktop-header">2025 Proj Round</span></th>
+                    <th onclick="sortTable(7)" title="Click to sort"><span class="compact-header">Keep Rd</span><span class="desktop-header">Keeper Round</span></th>
+                    <th onclick="sortTable(8)" title="Click to sort"><span class="compact-header">Diff</span><span class="desktop-header">Round Differential</span></th>
+                    <th onclick="sortTable(9)" title="Click to sort"><span class="compact-header">Score</span><span class="desktop-header">Value Score</span></th>
                 </tr>
             </thead>
             <tbody>
@@ -46,48 +64,63 @@
                     data-keeper="{{ player['2024_keeper_status'] }}"
                     data-eligible="{{ player['2025_keeper_eligible'] }}"
                     data-valuable="{{ (player['2025_projected_draft_round'] or 0) > (player['2025_keeper_round'] or 0) }}">
-                    <td>
-                        {% if not player['2025_keeper_eligible'] %}
-                            <strong class="ineligible-player" title="This player cannot be kept in 2025">{{ player.player_name }}</strong>
-                        {% else %}
-                            <strong>{{ player.player_name }}</strong>
-                        {% endif %}
-                        {% if player['2024_keeper_status'] %}
-                            <span class="keeper-badge" title="2024 Keeper">K</span>
-                        {% endif %}
-                    </td>
-                    <td>{{ player['2024_manager'] }}</td>
-                    <td>{{ player['2024_draft_round'] }}</td>
-                    <td>{{ player['2024_overall_pick'] }}</td>
-                    <td>
+                    <td class="rank-cell">
                         {% if player['2025_draft_rank'] %}
                             #{{ "%.0f"|format(player['2025_draft_rank']) }}
                         {% else %}
                             <span style="color: #999;">N/A</span>
                         {% endif %}
                     </td>
-                    <td>
+                    <td class="player-name-cell">
+                        {% if not player['2025_keeper_eligible'] %}
+                            <strong class="ineligible-player player-name" title="This player cannot be kept in 2025">{{ player.player_name }}</strong>
+                        {% else %}
+                            <strong class="player-name">{{ player.player_name }}</strong>
+                        {% endif %}
+                        {% if player['2024_keeper_status'] %}
+                            <span class="keeper-badge" title="2024 Keeper">K</span>
+                        {% endif %}
+                        {% if player['waiver_pickup'] %}
+                            <span class="waiver-badge" title="This player was a waiver wire pickup and can be kept for a 5th round pick">WW</span>
+                        {% endif %}
+                    </td>
+                    <td class="manager-cell">{{ player['2024_manager'] }}</td>
+                    <td class="mobile-hidden">
+                        {% if player['waiver_pickup'] %}
+                            <span style="color: #999;">WW</span>
+                        {% else %}
+                            {{ "%.0f"|format(player['2024_draft_round']) }}
+                        {% endif %}
+                    </td>
+                    <td style="display: none;">
+                        {% if player['waiver_pickup'] %}
+                            <span style="color: #999;">-</span>
+                        {% else %}
+                            {{ "%.0f"|format(player['2024_overall_pick']) }}
+                        {% endif %}
+                    </td>
+                    <td class="mobile-hidden">
                         {% if player['2025_position_rank'] %}
                             <span class="position-rank">{{ player['2025_position_rank'] }}</span>
                         {% else %}
                             <span style="color: #999;">N/A</span>
                         {% endif %}
                     </td>
-                    <td>
+                    <td class="score-cell">
                         {% if player['2025_projected_draft_round'] %}
-                            R{{ "%.0f"|format(player['2025_projected_draft_round']) }}
+                            {{ "%.0f"|format(player['2025_projected_draft_round']) }}
                         {% else %}
                             <span style="color: #999;">N/A</span>
                         {% endif %}
                     </td>
-                    <td>
+                    <td class="score-cell">
                         {% if player['2025_keeper_eligible'] %}
-                            R{{ player['2025_keeper_round'] }}
+                            {{ "%.0f"|format(player['2025_keeper_round']) }}
                         {% else %}
                             <span style="color: #999;">N/A</span>
                         {% endif %}
                     </td>
-                    <td>
+                    <td class="score-cell">
                         {% if player['2025_keeper_eligible'] and player['2025_projected_draft_round'] and player['2025_keeper_round'] %}
                             {% set value = player['2025_keeper_round'] - player['2025_projected_draft_round'] %}
                             {% if value > 0 %}
@@ -101,6 +134,12 @@
                             <span style="color: #999;">N/A</span>
                         {% endif %}
                     </td>
+                    <td class="value-score-cell score-cell" 
+                        data-keeper-round="{{ player['2025_keeper_round'] or 0 }}"
+                        data-projected-round="{{ player['2025_projected_draft_round'] or 0 }}"
+                        data-eligible="{{ player['2025_keeper_eligible'] }}">
+                        <span style="color: #999;">-</span>
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>
@@ -111,6 +150,55 @@
 
 {% block extra_js %}
 <script>
+    // Round score mapping: 1->14, 2->13, 3->12, ..., 14->1, 15+->0
+    const roundScores = {
+        1: 14,
+        2: 13,
+        3: 12,
+        4: 11,
+        5: 10,
+        6: 9,
+        7: 8,
+        8: 7,
+        9: 6,
+        10: 5,
+        11: 4,
+        12: 3,
+        13: 2,
+        14: 1
+    };
+    
+    // Function to get round score (0 for rounds > 14)
+    function getRoundScore(round) {
+        return roundScores[round] || 0;
+    }
+    
+    // Function to calculate value score
+    function calculateValueScore(keeperRound, projectedRound) {
+        if (!keeperRound || !projectedRound) return 0;
+        
+        let totalScore = 0;
+        
+        if (keeperRound > projectedRound) {
+            // Positive value: keeping at a later round than projected
+            for (let round = projectedRound; round <= keeperRound; round++) {
+                totalScore += getRoundScore(round);
+            }
+        } else if (keeperRound < projectedRound) {
+            // Negative value: keeping at an earlier round than projected
+            for (let round = keeperRound; round <= projectedRound; round++) {
+                totalScore += getRoundScore(round);
+            }
+            totalScore = -totalScore; // Make it negative
+        } else {
+            // Equal rounds, no value
+            return 0;
+        }
+        
+        // Divide by 105 and multiply by 100 for percentage display
+        return (totalScore / 105) * 100;
+    }
+    
     let sortDirection = {};
     
     function sortTable(columnIndex) {
@@ -127,10 +215,32 @@
             const bVal = b.cells[columnIndex].textContent.trim();
             
             // Handle numeric columns
-            if (columnIndex === 2 || columnIndex === 3 || columnIndex === 4 || columnIndex === 6 || columnIndex === 7 || columnIndex === 8) {
+            if (columnIndex === 0 || columnIndex === 3 || columnIndex === 5 || columnIndex === 6 || columnIndex === 7 || columnIndex === 8 || columnIndex === 9) {
                 const aNum = parseFloat(aVal.replace(/[^-\d.]/g, '')) || -999;
                 const bNum = parseFloat(bVal.replace(/[^-\d.]/g, '')) || -999;
                 return ascending ? aNum - bNum : bNum - aNum;
+            }
+            
+            // Handle 2025 Position column (natural sort for QB1, QB2, etc.)
+            if (columnIndex === 4) {
+                const parsePosition = (pos) => {
+                    const match = pos.match(/^([A-Z]+)(\d+)$/);
+                    if (match) {
+                        return { position: match[1], number: parseInt(match[2]) };
+                    }
+                    return { position: pos, number: 0 };
+                };
+                
+                const aParsed = parsePosition(aVal);
+                const bParsed = parsePosition(bVal);
+                
+                // First sort by position (QB, RB, WR, TE)
+                if (aParsed.position !== bParsed.position) {
+                    return ascending ? aParsed.position.localeCompare(bParsed.position) : bParsed.position.localeCompare(aParsed.position);
+                }
+                
+                // Then sort by number
+                return ascending ? aParsed.number - bParsed.number : bParsed.number - aParsed.number;
             }
             
             // Handle text columns
@@ -152,6 +262,7 @@
     function filterTable() {
         const filterValue = document.getElementById('filterSelect').value;
         const managerValue = document.getElementById('managerFilter').value;
+        const positionValue = document.getElementById('positionFilter').value;
         const searchValue = document.getElementById('searchInput').value.toLowerCase();
         const rows = document.querySelectorAll('.player-row');
         
@@ -168,7 +279,7 @@
                 if (row.dataset.eligible === 'False') {
                     showRow = false;
                 } else {
-                    // Check if the Value column (index 8) has a positive number
+                    // Check if the Round Differential column (index 8) has a positive number
                     const valueCell = row.cells[8].textContent.trim();
                     const valueMatch = valueCell.match(/^[+-]?\d+$/);
                     const value = valueMatch ? parseInt(valueMatch[0]) : 0;
@@ -180,14 +291,22 @@
             
             // Apply manager filter
             if (showRow && managerValue !== 'all') {
-                const managerName = row.cells[1].textContent.trim();
+                const managerName = row.cells[2].textContent.trim();
                 showRow = managerName === managerValue;
+            }
+            
+            // Apply position filter
+            if (showRow && positionValue !== 'all') {
+                const positionCell = row.cells[4].textContent.trim(); // 2025 Position column
+                const positionMatch = positionCell.match(/^([A-Z]+)/); // Extract QB, RB, WR, TE
+                const playerPosition = positionMatch ? positionMatch[1] : '';
+                showRow = playerPosition === positionValue;
             }
             
             // Apply search
             if (showRow && searchValue) {
-                const playerName = row.cells[0].textContent.toLowerCase();
-                const managerName = row.cells[1].textContent.toLowerCase();
+                const playerName = row.cells[1].textContent.toLowerCase();
+                const managerName = row.cells[2].textContent.toLowerCase();
                 showRow = playerName.includes(searchValue) || managerName.includes(searchValue);
             }
             
@@ -198,9 +317,94 @@
     // Add event listeners
     document.getElementById('filterSelect').addEventListener('change', filterTable);
     document.getElementById('managerFilter').addEventListener('change', filterTable);
+    document.getElementById('positionFilter').addEventListener('change', filterTable);
     document.getElementById('searchInput').addEventListener('input', filterTable);
     
-    // Initial sort by 2024 overall pick
-    sortTable(3);
+    // Function to populate value scores
+    function populateValueScores() {
+        const valueScoreCells = document.querySelectorAll('.value-score-cell');
+        
+        valueScoreCells.forEach(cell => {
+            const keeperRound = parseInt(cell.dataset.keeperRound) || 0;
+            const projectedRound = parseInt(cell.dataset.projectedRound) || 0;
+            const eligible = cell.dataset.eligible === 'True';
+            
+            if (eligible && keeperRound > 0 && projectedRound > 0) {
+                const valueScore = calculateValueScore(keeperRound, projectedRound);
+                
+                if (valueScore > 0) {
+                    cell.innerHTML = `<span style="color: #28a745; font-weight: bold;">+${valueScore.toFixed(1)}</span>`;
+                } else if (valueScore < 0) {
+                    cell.innerHTML = `<span style="color: #dc3545; font-weight: bold;">${valueScore.toFixed(1)}</span>`;
+                } else {
+                    cell.innerHTML = `<span style="color: #6c757d;">0.0</span>`;
+                }
+            } else {
+                cell.innerHTML = `<span style="color: #999;">N/A</span>`;
+            }
+        });
+    }
+    
+    // Function to highlight top 2 value score players for each manager
+    function highlightTopKeepers() {
+        const rows = document.querySelectorAll('.player-row');
+        const managerPlayers = {};
+        
+        // Group players by manager and collect their value scores
+        rows.forEach(row => {
+            const managerCell = row.cells[2]; // 2024 Manager column
+            const manager = managerCell.textContent.trim();
+            const valueScoreCell = row.querySelector('.value-score-cell');
+            const eligible = valueScoreCell.dataset.eligible === 'True';
+            const keeperRound = parseInt(valueScoreCell.dataset.keeperRound) || 0;
+            const projectedRound = parseInt(valueScoreCell.dataset.projectedRound) || 0;
+            
+            if (eligible && keeperRound > 0 && projectedRound > 0) {
+                const valueScore = calculateValueScore(keeperRound, projectedRound);
+                
+                if (!managerPlayers[manager]) {
+                    managerPlayers[manager] = [];
+                }
+                
+                managerPlayers[manager].push({
+                    row: row,
+                    valueScore: valueScore,
+                    playerName: row.cells[1].querySelector('strong').textContent.trim()
+                });
+            }
+        });
+        
+        // For each manager, find top 2 players and highlight them
+        Object.keys(managerPlayers).forEach(manager => {
+            const players = managerPlayers[manager];
+            
+            // Sort by value score descending and take top 2
+            players.sort((a, b) => b.valueScore - a.valueScore);
+            const topPlayers = players.slice(0, 2);
+            
+            topPlayers.forEach(player => {
+                const playerNameElement = player.row.cells[1].querySelector('strong');
+                
+                // Add blue highlighting
+                playerNameElement.style.color = '#007bff';
+                playerNameElement.style.backgroundColor = '#e3f2fd';
+                playerNameElement.style.padding = '2px 4px';
+                playerNameElement.style.borderRadius = '3px';
+                
+                // Add tooltip
+                playerNameElement.title = `This player is a probable keeper for ${manager}`;
+                playerNameElement.style.cursor = 'help';
+            });
+        });
+    }
+    
+    // Populate value scores on page load
+    populateValueScores();
+    
+    // Highlight top keepers after value scores are calculated
+    highlightTopKeepers();
+    
+    // Initial sort by 2025 rank
+    sortTable(0);
 </script>
 {% endblock %}

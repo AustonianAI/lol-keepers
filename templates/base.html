@@ -141,6 +141,18 @@
             opacity: 0.6;
         }
         
+        .waiver-badge {
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            color: white;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-left: 8px;
+            display: inline-block;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+        
         .error {
             background-color: #f8d7da;
             color: #721c24;
@@ -164,6 +176,199 @@
             
             h1 {
                 font-size: 1.8rem;
+            }
+        }
+        
+        /* Desktop header styles */
+        .compact-header {
+            display: none;
+        }
+        
+        .desktop-header {
+            display: inline;
+        }
+        
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0;
+                margin: 0;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: 0.25rem;
+            }
+            
+            header {
+                padding: 0.5rem 0;
+                margin-bottom: 0.5rem;
+            }
+            
+            /* Hide non-essential columns on mobile */
+            .mobile-hidden {
+                display: none !important;
+            }
+            
+            /* Stack filter controls vertically */
+            .filter-container {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                padding: 5px;
+                margin-bottom: 0 !important;
+            }
+            
+            .filter-row {
+                display: flex;
+                flex-direction: column;
+                gap: 3px;
+            }
+            
+            .filter-row label {
+                font-size: 12px;
+                margin-bottom: 1px;
+            }
+            
+            .filter-row select,
+            .filter-row input {
+                width: 100%;
+                padding: 6px;
+                font-size: 14px;
+                border-radius: 4px;
+                border: 1px solid #ddd;
+            }
+            
+            /* Aggressive table optimizations */
+            table {
+                font-size: 10px;
+                width: 100%;
+            }
+            
+            th, td {
+                padding: 2px 1px;
+                white-space: nowrap;
+                font-size: 10px;
+            }
+            
+            th {
+                font-size: 9px;
+                padding: 8px 2px;
+            }
+            
+            /* Player name column with ellipsis */
+            .player-name-cell {
+                max-width: 80px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            
+            .player-name {
+                font-size: 10px;
+                font-weight: bold;
+                display: block;
+                max-width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            
+            /* Manager column */
+            .manager-cell {
+                max-width: 60px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 9px;
+            }
+            
+            /* Rank column */
+            .rank-cell {
+                max-width: 35px;
+                font-size: 9px;
+            }
+            
+            /* Score columns */
+            .score-cell {
+                max-width: 40px;
+                font-size: 9px;
+            }
+            
+            /* Remove margins for more space */
+            .card {
+                margin: 0;
+                border-radius: 0;
+                padding: 0;
+            }
+            
+            /* Horizontal scroll with sticky first column */
+            .table-container {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                margin: 0;
+                padding: 0;
+            }
+            
+            table {
+                min-width: 100%;
+                margin: 0;
+                border-collapse: collapse;
+            }
+            
+            /* Compact column headers */
+            .compact-header {
+                display: inline;
+                font-size: 8px;
+                line-height: 1.1;
+            }
+            
+            .desktop-header {
+                display: none;
+            }
+            
+            /* Badges */
+            .keeper-badge, .waiver-badge {
+                font-size: 7px;
+                padding: 1px 2px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0;
+            }
+            
+            h1 {
+                font-size: 1.3rem;
+            }
+            
+            table {
+                font-size: 9px;
+            }
+            
+            th, td {
+                padding: 1px;
+                font-size: 9px;
+            }
+            
+            .player-name-cell {
+                max-width: 70px;
+            }
+            
+            .manager-cell {
+                max-width: 50px;
+            }
+            
+            .rank-cell {
+                max-width: 30px;
+            }
+            
+            .score-cell {
+                max-width: 35px;
+            }
+            
+            .compact-header {
+                font-size: 7px;
             }
         }
     </style>
