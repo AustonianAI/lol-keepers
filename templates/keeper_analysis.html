@@ -5,33 +5,12 @@
 {% block content %}
 <div class="filter-container" style="margin-bottom: 1rem;">
     <div class="filter-row">
-        <label for="filterSelect" style="margin-right: 0.5rem; font-weight: bold;">Filter:</label>
-        <select id="filterSelect" style="padding: 8px; border-radius: 4px; border: 1px solid #ddd;">
-            <option value="all">All Players</option>
-            <option value="keepers">2024 Keepers</option>
-            <option value="eligible">2025 Eligible Keepers</option>
-            <option value="valuable">Valuable Options</option>
-        </select>
-    </div>
-    
-    <div class="filter-row">
         <label for="managerFilter" style="margin-right: 0.5rem; font-weight: bold;">Manager:</label>
         <select id="managerFilter" style="padding: 8px; border-radius: 4px; border: 1px solid #ddd;">
             <option value="all">All Managers</option>
             {% for manager in managers %}
             <option value="{{ manager }}">{{ manager }}</option>
             {% endfor %}
-        </select>
-    </div>
-    
-    <div class="filter-row">
-        <label for="positionFilter" style="margin-right: 0.5rem; font-weight: bold;">Position:</label>
-        <select id="positionFilter" style="padding: 8px; border-radius: 4px; border: 1px solid #ddd;">
-            <option value="all">All Positions</option>
-            <option value="QB">Quarterback</option>
-            <option value="RB">Running Back</option>
-            <option value="WR">Wide Receiver</option>
-            <option value="TE">Tight End</option>
         </select>
     </div>
     
@@ -260,47 +239,17 @@
     }
     
     function filterTable() {
-        const filterValue = document.getElementById('filterSelect').value;
         const managerValue = document.getElementById('managerFilter').value;
-        const positionValue = document.getElementById('positionFilter').value;
         const searchValue = document.getElementById('searchInput').value.toLowerCase();
         const rows = document.querySelectorAll('.player-row');
         
         rows.forEach(row => {
             let showRow = true;
             
-            // Apply status filter
-            if (filterValue === 'keepers' && row.dataset.keeper === 'False') {
-                showRow = false;
-            } else if (filterValue === 'eligible' && (row.dataset.keeper === 'False' || row.dataset.eligible === 'False')) {
-                showRow = false;
-            } else if (filterValue === 'valuable') {
-                // For valuable keepers: must be 2025 eligible and have positive value
-                if (row.dataset.eligible === 'False') {
-                    showRow = false;
-                } else {
-                    // Check if the Round Differential column (index 8) has a positive number
-                    const valueCell = row.cells[8].textContent.trim();
-                    const valueMatch = valueCell.match(/^[+-]?\d+$/);
-                    const value = valueMatch ? parseInt(valueMatch[0]) : 0;
-                    if (value <= 0) {
-                        showRow = false;
-                    }
-                }
-            }
-            
             // Apply manager filter
-            if (showRow && managerValue !== 'all') {
+            if (managerValue !== 'all') {
                 const managerName = row.cells[2].textContent.trim();
                 showRow = managerName === managerValue;
-            }
-            
-            // Apply position filter
-            if (showRow && positionValue !== 'all') {
-                const positionCell = row.cells[4].textContent.trim(); // 2025 Position column
-                const positionMatch = positionCell.match(/^([A-Z]+)/); // Extract QB, RB, WR, TE
-                const playerPosition = positionMatch ? positionMatch[1] : '';
-                showRow = playerPosition === positionValue;
             }
             
             // Apply search
@@ -315,9 +264,7 @@
     }
     
     // Add event listeners
-    document.getElementById('filterSelect').addEventListener('change', filterTable);
     document.getElementById('managerFilter').addEventListener('change', filterTable);
-    document.getElementById('positionFilter').addEventListener('change', filterTable);
     document.getElementById('searchInput').addEventListener('input', filterTable);
     
     // Function to populate value scores
@@ -374,13 +321,16 @@
             }
         });
         
-        // For each manager, find top 2 players and highlight them
+        // For each manager, find top positive-value players and highlight them
         Object.keys(managerPlayers).forEach(manager => {
             const players = managerPlayers[manager];
             
-            // Sort by value score descending and take top 2
-            players.sort((a, b) => b.valueScore - a.valueScore);
-            const topPlayers = players.slice(0, 2);
+            // Filter to only positive value scores, then sort by value score descending
+            const positiveValuePlayers = players.filter(player => player.valueScore > 0);
+            positiveValuePlayers.sort((a, b) => b.valueScore - a.valueScore);
+            
+            // Take up to 2 positive-value players, but only highlight if they have positive value
+            const topPlayers = positiveValuePlayers.slice(0, Math.min(2, positiveValuePlayers.length));
             
             topPlayers.forEach(player => {
                 const playerNameElement = player.row.cells[1].querySelector('strong');

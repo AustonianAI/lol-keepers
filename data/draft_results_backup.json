@@ -1,0 +1,2027 @@
+{
+  "draft_info": {
+    "year": 2024,
+    "total_teams": 12,
+    "total_rounds": 14,
+    "draft_type": "snake"
+  },
+  "teams": [
+    {
+      "team_name": "Christian McCarryMe",
+      "team_id": 1,
+      "manager": "Leslie",
+      "rank": 9,
+      "rating": 597,
+      "level": "Bronze"
+    },
+    {
+      "team_name": "A Team with No Tegrity",
+      "team_id": 2,
+      "manager": "Zak",
+      "rank": 8,
+      "rating": 597,
+      "level": "Bronze"
+    },
+    {
+      "team_name": "Mistakes Were Made",
+      "team_id": 3,
+      "manager": "DJ",
+      "rank": 3,
+      "rating": 768,
+      "level": "Gold"
+    },
+    {
+      "team_name": "Bidens bidet",
+      "team_id": 4,
+      "manager": "iggy",
+      "rank": 12,
+      "rating": 553,
+      "level": "Bronze"
+    },
+    {
+      "team_name": "No Zay Jose",
+      "team_id": 5,
+      "manager": "Donald",
+      "rank": 7,
+      "rating": 625,
+      "level": "Silver"
+    },
+    {
+      "team_name": "Superb Owls",
+      "team_id": 6,
+      "manager": "Jared",
+      "rank": 6,
+      "rating": 678,
+      "level": "Silver"
+    },
+    {
+      "team_name": "Crazy Rich Achane's",
+      "team_id": 7,
+      "manager": "Hugo",
+      "rank": 1,
+      "rating": 864,
+      "level": "Platinum"
+    },
+    {
+      "team_name": "Garrett Top",
+      "team_id": 8,
+      "manager": "Paige",
+      "rank": 11,
+      "rating": 556,
+      "level": "Bronze"
+    },
+    {
+      "team_name": "CYALTR",
+      "team_id": 9,
+      "manager": "CYALTR",
+      "rank": 5,
+      "rating": 721,
+      "level": "Gold"
+    },
+    {
+      "team_name": "Grit Factory",
+      "team_id": 10,
+      "manager": "Bob",
+      "rank": 4,
+      "rating": 752,
+      "level": "Gold"
+    },
+    {
+      "team_name": "Hawk Tua",
+      "team_id": 11,
+      "manager": "Austin",
+      "rank": 2,
+      "rating": 802,
+      "level": "Platinum"
+    },
+    {
+      "team_name": "Deebo Beebo",
+      "team_id": 12,
+      "manager": "Dale",
+      "rank": 10,
+      "rating": 573,
+      "level": "Bronze"
+    }
+  ],
+  "draft_picks": [
+    {
+      "player_name": "Christian McCaffrey",
+      "drafting_team": "Christian McCarryMe",
+      "team_id": 1,
+      "round": 1,
+      "overall_pick": 1,
+      "keeper_status": false,
+      "2025_keeper_eligible": false
+    },
+    {
+      "player_name": "CeeDee Lamb",
+      "drafting_team": "A Team with No Tegrity",
+      "team_id": 2,
+      "round": 1,
+      "overall_pick": 2,
+      "keeper_status": false,
+      "2025_keeper_eligible": false
+    },
+    {
+      "player_name": "Tyreek Hill",
+      "drafting_team": "Mistakes Were Made",
+      "team_id": 3,
+      "round": 1,
+      "overall_pick": 3,
+      "keeper_status": false,
+      "2025_keeper_eligible": false
+    },
+    {
+      "player_name": "Bijan Robinson",
+      "drafting_team": "Bidens bidet",
+      "team_id": 4,
+      "round": 1,
+      "overall_pick": 4,
+      "keeper_status": false,
+      "2025_keeper_eligible": false
+    },
+    {
+      "player_name": "Amon-Ra St. Brown",
+      "drafting_team": "No Zay Jose",
+      "team_id": 5,
+      "round": 1,
+      "overall_pick": 5,
+      "keeper_status": false,
+      "2025_keeper_eligible": false
+    },
+    {
+      "player_name": "Justin Jefferson",
+      "drafting_team": "Superb Owls",
+      "team_id": 6,
+      "round": 1,
+      "overall_pick": 6,
+      "keeper_status": false,
+      "2025_keeper_eligible": false
+    },
+    {
+      "player_name": "A.J. Brown",
+      "drafting_team": "Crazy Rich Achane's",
+      "team_id": 7,
+      "round": 1,
+      "overall_pick": 7,
+      "keeper_status": false,
+      "2025_keeper_eligible": false
+    },
+    {
+      "player_name": "Jonathan Taylor",
+      "drafting_team": "Garrett Top",
+      "team_id": 8,
+      "round": 1,
+      "overall_pick": 8,
+      "keeper_status": false,
+      "2025_keeper_eligible": false
+    },
+    {
+      "player_name": "Ja'Marr Chase",
+      "drafting_team": "CYALTR",
+      "team_id": 9,
+      "round": 1,
+      "overall_pick": 9,
+      "keeper_status": true,
+      "2025_keeper_eligible": false
+    },
+    {
+      "player_name": "Saquon Barkley",
+      "drafting_team": "Grit Factory",
+      "team_id": 10,
+      "round": 1,
+      "overall_pick": 10,
+      "keeper_status": false,
+      "2025_keeper_eligible": false
+    },
+    {
+      "player_name": "Jahmyr Gibbs",
+      "drafting_team": "Hawk Tua",
+      "team_id": 11,
+      "round": 1,
+      "overall_pick": 11,
+      "keeper_status": false,
+      "2025_keeper_eligible": false
+    },
+    {
+      "player_name": "Travis Etienne Jr.",
+      "drafting_team": "Deebo Beebo",
+      "team_id": 12,
+      "round": 1,
+      "overall_pick": 12,
+      "keeper_status": false,
+      "2025_keeper_eligible": false
+    },
+    {
+      "player_name": "Cooper Kupp",
+      "drafting_team": "Deebo Beebo",
+      "team_id": 12,
+      "round": 2,
+      "overall_pick": 13,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Marvin Harrison Jr.",
+      "drafting_team": "Hawk Tua",
+      "team_id": 11,
+      "round": 2,
+      "overall_pick": 14,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Derrick Henry",
+      "drafting_team": "Grit Factory",
+      "team_id": 10,
+      "round": 2,
+      "overall_pick": 15,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Davante Adams",
+      "drafting_team": "CYALTR",
+      "team_id": 9,
+      "round": 2,
+      "overall_pick": 16,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Travis Kelce",
+      "drafting_team": "Garrett Top",
+      "team_id": 8,
+      "round": 2,
+      "overall_pick": 17,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "James Cook",
+      "drafting_team": "Crazy Rich Achane's",
+      "team_id": 7,
+      "round": 2,
+      "overall_pick": 18,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Josh Allen",
+      "drafting_team": "Superb Owls",
+      "team_id": 6,
+      "round": 2,
+      "overall_pick": 19,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Jalen Hurts",
+      "drafting_team": "No Zay Jose",
+      "team_id": 5,
+      "round": 2,
+      "overall_pick": 20,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Brandon Aiyuk",
+      "drafting_team": "Bidens bidet",
+      "team_id": 4,
+      "round": 2,
+      "overall_pick": 21,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "DJ Moore",
+      "drafting_team": "Mistakes Were Made",
+      "team_id": 3,
+      "round": 2,
+      "overall_pick": 22,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Patrick Mahomes II",
+      "drafting_team": "A Team with No Tegrity",
+      "team_id": 2,
+      "round": 2,
+      "overall_pick": 23,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "DeVonta Smith",
+      "drafting_team": "Christian McCarryMe",
+      "team_id": 1,
+      "round": 2,
+      "overall_pick": 24,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Josh Jacobs",
+      "drafting_team": "Christian McCarryMe",
+      "team_id": 1,
+      "round": 3,
+      "overall_pick": 25,
+      "keeper_status": true,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Breece Hall",
+      "drafting_team": "A Team with No Tegrity",
+      "team_id": 2,
+      "round": 3,
+      "overall_pick": 26,
+      "keeper_status": true,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Kyle Pitts Sr.",
+      "drafting_team": "Christian McCarryMe",
+      "team_id": 1,
+      "round": 3,
+      "overall_pick": 27,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Joe Mixon",
+      "drafting_team": "Bidens bidet",
+      "team_id": 4,
+      "round": 3,
+      "overall_pick": 28,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Rachaad White",
+      "drafting_team": "No Zay Jose",
+      "team_id": 5,
+      "round": 3,
+      "overall_pick": 29,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Stefon Diggs",
+      "drafting_team": "Superb Owls",
+      "team_id": 6,
+      "round": 3,
+      "overall_pick": 30,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Lamar Jackson",
+      "drafting_team": "Crazy Rich Achane's",
+      "team_id": 7,
+      "round": 3,
+      "overall_pick": 31,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "DK Metcalf",
+      "drafting_team": "Garrett Top",
+      "team_id": 8,
+      "round": 3,
+      "overall_pick": 32,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Malik Nabers",
+      "drafting_team": "CYALTR",
+      "team_id": 9,
+      "round": 3,
+      "overall_pick": 33,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Mark Andrews",
+      "drafting_team": "Grit Factory",
+      "team_id": 10,
+      "round": 3,
+      "overall_pick": 34,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Amari Cooper",
+      "drafting_team": "Hawk Tua",
+      "team_id": 11,
+      "round": 3,
+      "overall_pick": 35,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Anthony Richardson Sr.",
+      "drafting_team": "Deebo Beebo",
+      "team_id": 12,
+      "round": 3,
+      "overall_pick": 36,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Alvin Kamara",
+      "drafting_team": "Deebo Beebo",
+      "team_id": 12,
+      "round": 4,
+      "overall_pick": 37,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Trey McBride",
+      "drafting_team": "Hawk Tua",
+      "team_id": 11,
+      "round": 4,
+      "overall_pick": 38,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Tank Dell",
+      "drafting_team": "Grit Factory",
+      "team_id": 10,
+      "round": 4,
+      "overall_pick": 39,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Isiah Pacheco",
+      "drafting_team": "CYALTR",
+      "team_id": 9,
+      "round": 4,
+      "overall_pick": 40,
+      "keeper_status": true,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Kyler Murray",
+      "drafting_team": "Garrett Top",
+      "team_id": 8,
+      "round": 4,
+      "overall_pick": 41,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Rashee Rice",
+      "drafting_team": "Crazy Rich Achane's",
+      "team_id": 7,
+      "round": 4,
+      "overall_pick": 42,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "David Montgomery",
+      "drafting_team": "Superb Owls",
+      "team_id": 6,
+      "round": 4,
+      "overall_pick": 43,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Terry McLaurin",
+      "drafting_team": "No Zay Jose",
+      "team_id": 5,
+      "round": 4,
+      "overall_pick": 44,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "George Kittle",
+      "drafting_team": "Bidens bidet",
+      "team_id": 4,
+      "round": 4,
+      "overall_pick": 45,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Aaron Jones Sr.",
+      "drafting_team": "Mistakes Were Made",
+      "team_id": 3,
+      "round": 4,
+      "overall_pick": 46,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Zay Flowers",
+      "drafting_team": "A Team with No Tegrity",
+      "team_id": 2,
+      "round": 4,
+      "overall_pick": 47,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "C.J. Stroud",
+      "drafting_team": "Christian McCarryMe",
+      "team_id": 1,
+      "round": 4,
+      "overall_pick": 48,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Tee Higgins",
+      "drafting_team": "Christian McCarryMe",
+      "team_id": 1,
+      "round": 5,
+      "overall_pick": 49,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "James Conner",
+      "drafting_team": "A Team with No Tegrity",
+      "team_id": 2,
+      "round": 5,
+      "overall_pick": 50,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Kyren Williams",
+      "drafting_team": "Mistakes Were Made",
+      "team_id": 3,
+      "round": 5,
+      "overall_pick": 51,
+      "keeper_status": true,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Najee Harris",
+      "drafting_team": "Bidens bidet",
+      "team_id": 4,
+      "round": 5,
+      "overall_pick": 52,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Dalton Kincaid",
+      "drafting_team": "No Zay Jose",
+      "team_id": 5,
+      "round": 5,
+      "overall_pick": 53,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Rhamondre Stevenson",
+      "drafting_team": "Superb Owls",
+      "team_id": 6,
+      "round": 5,
+      "overall_pick": 54,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Mike Evans",
+      "drafting_team": "Crazy Rich Achane's",
+      "team_id": 7,
+      "round": 5,
+      "overall_pick": 55,
+      "keeper_status": true,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "George Pickens",
+      "drafting_team": "Garrett Top",
+      "team_id": 8,
+      "round": 5,
+      "overall_pick": 56,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Jordan Love",
+      "drafting_team": "CYALTR",
+      "team_id": 9,
+      "round": 5,
+      "overall_pick": 57,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Joe Burrow",
+      "drafting_team": "Grit Factory",
+      "team_id": 10,
+      "round": 5,
+      "overall_pick": 58,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Puka Nacua",
+      "drafting_team": "Hawk Tua",
+      "team_id": 11,
+      "round": 5,
+      "overall_pick": 59,
+      "keeper_status": true,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Deebo Samuel Sr.",
+      "drafting_team": "Deebo Beebo",
+      "team_id": 12,
+      "round": 5,
+      "overall_pick": 60,
+      "keeper_status": true,
+      "2025_keeper_eligible": false
+    },
+    {
+      "player_name": "Javonte Williams",
+      "drafting_team": "Deebo Beebo",
+      "team_id": 12,
+      "round": 6,
+      "overall_pick": 61,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Zamir White",
+      "drafting_team": "Hawk Tua",
+      "team_id": 11,
+      "round": 6,
+      "overall_pick": 62,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Christian Kirk",
+      "drafting_team": "Grit Factory",
+      "team_id": 10,
+      "round": 6,
+      "overall_pick": 63,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "D'Andre Swift",
+      "drafting_team": "CYALTR",
+      "team_id": 9,
+      "round": 6,
+      "overall_pick": 64,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Calvin Ridley",
+      "drafting_team": "Garrett Top",
+      "team_id": 8,
+      "round": 6,
+      "overall_pick": 65,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Tony Pollard",
+      "drafting_team": "Crazy Rich Achane's",
+      "team_id": 7,
+      "round": 6,
+      "overall_pick": 66,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Jayden Reed",
+      "drafting_team": "Superb Owls",
+      "team_id": 6,
+      "round": 6,
+      "overall_pick": 67,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Chris Olave",
+      "drafting_team": "No Zay Jose",
+      "team_id": 5,
+      "round": 6,
+      "overall_pick": 68,
+      "keeper_status": true,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Chris Godwin",
+      "drafting_team": "Bidens bidet",
+      "team_id": 4,
+      "round": 6,
+      "overall_pick": 69,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Dak Prescott",
+      "drafting_team": "Mistakes Were Made",
+      "team_id": 3,
+      "round": 6,
+      "overall_pick": 70,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Drake London",
+      "drafting_team": "A Team with No Tegrity",
+      "team_id": 2,
+      "round": 6,
+      "overall_pick": 71,
+      "keeper_status": true,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Jaxon Smith-Njigba",
+      "drafting_team": "Mistakes Were Made",
+      "team_id": 3,
+      "round": 6,
+      "overall_pick": 72,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Diontae Johnson",
+      "drafting_team": "Christian McCarryMe",
+      "team_id": 1,
+      "round": 7,
+      "overall_pick": 73,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Evan Engram",
+      "drafting_team": "A Team with No Tegrity",
+      "team_id": 2,
+      "round": 7,
+      "overall_pick": 74,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Brian Thomas Jr.",
+      "drafting_team": "Mistakes Were Made",
+      "team_id": 3,
+      "round": 7,
+      "overall_pick": 75,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Rome Odunze",
+      "drafting_team": "Bidens bidet",
+      "team_id": 4,
+      "round": 7,
+      "overall_pick": 76,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Brian Robinson Jr.",
+      "drafting_team": "No Zay Jose",
+      "team_id": 5,
+      "round": 7,
+      "overall_pick": 77,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Tyjae Spears",
+      "drafting_team": "Superb Owls",
+      "team_id": 6,
+      "round": 7,
+      "overall_pick": 78,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Jake Ferguson",
+      "drafting_team": "Crazy Rich Achane's",
+      "team_id": 7,
+      "round": 7,
+      "overall_pick": 79,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Kenneth Walker III",
+      "drafting_team": "Garrett Top",
+      "team_id": 8,
+      "round": 7,
+      "overall_pick": 80,
+      "keeper_status": true,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "David Njoku",
+      "drafting_team": "CYALTR",
+      "team_id": 9,
+      "round": 7,
+      "overall_pick": 81,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Keenan Allen",
+      "drafting_team": "Grit Factory",
+      "team_id": 10,
+      "round": 7,
+      "overall_pick": 82,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Devin Singletary",
+      "drafting_team": "Hawk Tua",
+      "team_id": 11,
+      "round": 7,
+      "overall_pick": 83,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Courtland Sutton",
+      "drafting_team": "Deebo Beebo",
+      "team_id": 12,
+      "round": 7,
+      "overall_pick": 84,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Chase Brown",
+      "drafting_team": "Deebo Beebo",
+      "team_id": 12,
+      "round": 8,
+      "overall_pick": 85,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Jayden Daniels",
+      "drafting_team": "Hawk Tua",
+      "team_id": 11,
+      "round": 8,
+      "overall_pick": 86,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Jordan Addison",
+      "drafting_team": "Grit Factory",
+      "team_id": 10,
+      "round": 8,
+      "overall_pick": 87,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "San Francisco",
+      "drafting_team": "CYALTR",
+      "team_id": 9,
+      "round": 8,
+      "overall_pick": 88,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Garrett Wilson",
+      "drafting_team": "Garrett Top",
+      "team_id": 8,
+      "round": 8,
+      "overall_pick": 89,
+      "keeper_status": true,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Jonathon Brooks",
+      "drafting_team": "Crazy Rich Achane's",
+      "team_id": 7,
+      "round": 8,
+      "overall_pick": 90,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Cole Kmet",
+      "drafting_team": "Superb Owls",
+      "team_id": 6,
+      "round": 8,
+      "overall_pick": 91,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Jaylen Warren",
+      "drafting_team": "No Zay Jose",
+      "team_id": 5,
+      "round": 8,
+      "overall_pick": 92,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Brock Purdy",
+      "drafting_team": "Bidens bidet",
+      "team_id": 4,
+      "round": 8,
+      "overall_pick": 93,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Austin Ekeler",
+      "drafting_team": "Mistakes Were Made",
+      "team_id": 3,
+      "round": 8,
+      "overall_pick": 94,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Xavier Worthy",
+      "drafting_team": "A Team with No Tegrity",
+      "team_id": 2,
+      "round": 8,
+      "overall_pick": 95,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Zack Moss",
+      "drafting_team": "Christian McCarryMe",
+      "team_id": 1,
+      "round": 8,
+      "overall_pick": 96,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Marquise Brown",
+      "drafting_team": "Christian McCarryMe",
+      "team_id": 1,
+      "round": 9,
+      "overall_pick": 97,
+      "keeper_status": true,
+      "2025_keeper_eligible": false
+    },
+    {
+      "player_name": "DeAndre Hopkins",
+      "drafting_team": "A Team with No Tegrity",
+      "team_id": 2,
+      "round": 9,
+      "overall_pick": 98,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Keon Coleman",
+      "drafting_team": "Mistakes Were Made",
+      "team_id": 3,
+      "round": 9,
+      "overall_pick": 99,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Jameson Williams",
+      "drafting_team": "Bidens bidet",
+      "team_id": 4,
+      "round": 9,
+      "overall_pick": 100,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Jerome Ford",
+      "drafting_team": "No Zay Jose",
+      "team_id": 5,
+      "round": 9,
+      "overall_pick": 101,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Jared Goff",
+      "drafting_team": "Superb Owls",
+      "team_id": 6,
+      "round": 9,
+      "overall_pick": 102,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Christian Watson",
+      "drafting_team": "Crazy Rich Achane's",
+      "team_id": 7,
+      "round": 9,
+      "overall_pick": 103,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Nick Chubb",
+      "drafting_team": "Garrett Top",
+      "team_id": 8,
+      "round": 9,
+      "overall_pick": 104,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Justin Tucker",
+      "drafting_team": "CYALTR",
+      "team_id": 9,
+      "round": 9,
+      "overall_pick": 105,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Baltimore",
+      "drafting_team": "Grit Factory",
+      "team_id": 10,
+      "round": 9,
+      "overall_pick": 106,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Rico Dowdle",
+      "drafting_team": "Hawk Tua",
+      "team_id": 11,
+      "round": 9,
+      "overall_pick": 107,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Brock Bowers",
+      "drafting_team": "Deebo Beebo",
+      "team_id": 12,
+      "round": 9,
+      "overall_pick": 108,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Sam LaPorta",
+      "drafting_team": "Deebo Beebo",
+      "team_id": 12,
+      "round": 10,
+      "overall_pick": 109,
+      "keeper_status": true,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Chuba Hubbard",
+      "drafting_team": "Hawk Tua",
+      "team_id": 11,
+      "round": 10,
+      "overall_pick": 110,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Jaylen Waddle",
+      "drafting_team": "Grit Factory",
+      "team_id": 10,
+      "round": 10,
+      "overall_pick": 111,
+      "keeper_status": true,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Caleb Williams",
+      "drafting_team": "CYALTR",
+      "team_id": 9,
+      "round": 10,
+      "overall_pick": 112,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "New York",
+      "drafting_team": "Garrett Top",
+      "team_id": 8,
+      "round": 10,
+      "overall_pick": 113,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "De'Von Achane",
+      "drafting_team": "Crazy Rich Achane's",
+      "team_id": 7,
+      "round": 10,
+      "overall_pick": 114,
+      "keeper_status": true,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Tyler Lockett",
+      "drafting_team": "Superb Owls",
+      "team_id": 6,
+      "round": 10,
+      "overall_pick": 115,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Harrison Butker",
+      "drafting_team": "No Zay Jose",
+      "team_id": 5,
+      "round": 10,
+      "overall_pick": 116,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Michael Pittman Jr.",
+      "drafting_team": "Bidens bidet",
+      "team_id": 4,
+      "round": 10,
+      "overall_pick": 117,
+      "keeper_status": true,
+      "2025_keeper_eligible": false
+    },
+    {
+      "player_name": "Ladd McConkey",
+      "drafting_team": "Mistakes Were Made",
+      "team_id": 3,
+      "round": 10,
+      "overall_pick": 118,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Ezekiel Elliott",
+      "drafting_team": "A Team with No Tegrity",
+      "team_id": 2,
+      "round": 10,
+      "overall_pick": 119,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Dallas",
+      "drafting_team": "Christian McCarryMe",
+      "team_id": 1,
+      "round": 10,
+      "overall_pick": 120,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Brandon Aubrey",
+      "drafting_team": "Christian McCarryMe",
+      "team_id": 1,
+      "round": 11,
+      "overall_pick": 121,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Cleveland",
+      "drafting_team": "A Team with No Tegrity",
+      "team_id": 2,
+      "round": 11,
+      "overall_pick": 122,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Buffalo",
+      "drafting_team": "Mistakes Were Made",
+      "team_id": 3,
+      "round": 11,
+      "overall_pick": 123,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Kansas City",
+      "drafting_team": "Bidens bidet",
+      "team_id": 4,
+      "round": 11,
+      "overall_pick": 124,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Pittsburgh",
+      "drafting_team": "No Zay Jose",
+      "team_id": 5,
+      "round": 11,
+      "overall_pick": 125,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "J.K. Dobbins",
+      "drafting_team": "Superb Owls",
+      "team_id": 6,
+      "round": 11,
+      "overall_pick": 126,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Khalil Shakir",
+      "drafting_team": "Crazy Rich Achane's",
+      "team_id": 7,
+      "round": 11,
+      "overall_pick": 127,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Jake Elliott",
+      "drafting_team": "Garrett Top",
+      "team_id": 8,
+      "round": 11,
+      "overall_pick": 128,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Rashid Shaheed",
+      "drafting_team": "CYALTR",
+      "team_id": 9,
+      "round": 11,
+      "overall_pick": 129,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Trey Benson",
+      "drafting_team": "Grit Factory",
+      "team_id": 10,
+      "round": 11,
+      "overall_pick": 130,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Jaleel McLaughlin",
+      "drafting_team": "Hawk Tua",
+      "team_id": 11,
+      "round": 11,
+      "overall_pick": 131,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Blake Corum",
+      "drafting_team": "Deebo Beebo",
+      "team_id": 12,
+      "round": 11,
+      "overall_pick": 132,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Romeo Doubs",
+      "drafting_team": "Deebo Beebo",
+      "team_id": 12,
+      "round": 12,
+      "overall_pick": 133,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Nico Collins",
+      "drafting_team": "Hawk Tua",
+      "team_id": 11,
+      "round": 12,
+      "overall_pick": 134,
+      "keeper_status": true,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Jason Sanders",
+      "drafting_team": "Grit Factory",
+      "team_id": 10,
+      "round": 12,
+      "overall_pick": 135,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Dallas Goedert",
+      "drafting_team": "CYALTR",
+      "team_id": 9,
+      "round": 12,
+      "overall_pick": 136,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Tua Tagovailoa",
+      "drafting_team": "Garrett Top",
+      "team_id": 8,
+      "round": 12,
+      "overall_pick": 137,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Zach Charbonnet",
+      "drafting_team": "Crazy Rich Achane's",
+      "team_id": 7,
+      "round": 12,
+      "overall_pick": 138,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Dalton Schultz",
+      "drafting_team": "Superb Owls",
+      "team_id": 6,
+      "round": 12,
+      "overall_pick": 139,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Gus Edwards",
+      "drafting_team": "No Zay Jose",
+      "team_id": 5,
+      "round": 12,
+      "overall_pick": 140,
+      "keeper_status": true,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Tyler Conklin",
+      "drafting_team": "Bidens bidet",
+      "team_id": 4,
+      "round": 12,
+      "overall_pick": 141,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Raheem Mostert",
+      "drafting_team": "Mistakes Were Made",
+      "team_id": 3,
+      "round": 12,
+      "overall_pick": 142,
+      "keeper_status": true,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Younghoe Koo",
+      "drafting_team": "A Team with No Tegrity",
+      "team_id": 2,
+      "round": 12,
+      "overall_pick": 143,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Jakobi Meyers",
+      "drafting_team": "Christian McCarryMe",
+      "team_id": 1,
+      "round": 12,
+      "overall_pick": 144,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Joshua Palmer",
+      "drafting_team": "Christian McCarryMe",
+      "team_id": 1,
+      "round": 13,
+      "overall_pick": 145,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Justin Herbert",
+      "drafting_team": "A Team with No Tegrity",
+      "team_id": 2,
+      "round": 13,
+      "overall_pick": 146,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "T.J. Hockenson",
+      "drafting_team": "Mistakes Were Made",
+      "team_id": 3,
+      "round": 13,
+      "overall_pick": 147,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Aaron Rodgers",
+      "drafting_team": "Bidens bidet",
+      "team_id": 4,
+      "round": 13,
+      "overall_pick": 148,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Curtis Samuel",
+      "drafting_team": "No Zay Jose",
+      "team_id": 5,
+      "round": 13,
+      "overall_pick": 149,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Miami",
+      "drafting_team": "Superb Owls",
+      "team_id": 6,
+      "round": 13,
+      "overall_pick": 150,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Mike Williams",
+      "drafting_team": "Crazy Rich Achane's",
+      "team_id": 7,
+      "round": 13,
+      "overall_pick": 151,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Pat Freiermuth",
+      "drafting_team": "Garrett Top",
+      "team_id": 8,
+      "round": 13,
+      "overall_pick": 152,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Adonai Mitchell",
+      "drafting_team": "CYALTR",
+      "team_id": 9,
+      "round": 13,
+      "overall_pick": 153,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Trevor Lawrence",
+      "drafting_team": "Grit Factory",
+      "team_id": 10,
+      "round": 13,
+      "overall_pick": 154,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Kimani Vidal",
+      "drafting_team": "Hawk Tua",
+      "team_id": 11,
+      "round": 13,
+      "overall_pick": 155,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Chicago",
+      "drafting_team": "Deebo Beebo",
+      "team_id": 12,
+      "round": 13,
+      "overall_pick": 156,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Jake Moody",
+      "drafting_team": "Deebo Beebo",
+      "team_id": 12,
+      "round": 14,
+      "overall_pick": 157,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Tyler Allgeier",
+      "drafting_team": "Hawk Tua",
+      "team_id": 11,
+      "round": 14,
+      "overall_pick": 158,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Luke Musgrave",
+      "drafting_team": "Grit Factory",
+      "team_id": 10,
+      "round": 14,
+      "overall_pick": 159,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Khalil Herbert",
+      "drafting_team": "CYALTR",
+      "team_id": 9,
+      "round": 14,
+      "overall_pick": 160,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Ty Chandler",
+      "drafting_team": "Garrett Top",
+      "team_id": 8,
+      "round": 14,
+      "overall_pick": 161,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Ka'imi Fairbairn",
+      "drafting_team": "Crazy Rich Achane's",
+      "team_id": 7,
+      "round": 14,
+      "overall_pick": 162,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Evan McPherson",
+      "drafting_team": "Superb Owls",
+      "team_id": 6,
+      "round": 14,
+      "overall_pick": 163,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Gabe Davis",
+      "drafting_team": "No Zay Jose",
+      "team_id": 5,
+      "round": 14,
+      "overall_pick": 164,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Cameron Dicker",
+      "drafting_team": "Bidens bidet",
+      "team_id": 4,
+      "round": 14,
+      "overall_pick": 165,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Dustin Hopkins",
+      "drafting_team": "Mistakes Were Made",
+      "team_id": 3,
+      "round": 14,
+      "overall_pick": 166,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Taysom Hill",
+      "drafting_team": "A Team with No Tegrity",
+      "team_id": 2,
+      "round": 14,
+      "overall_pick": 167,
+      "keeper_status": false,
+      "2025_keeper_eligible": true
+    },
+    {
+      "player_name": "Jaylen Wright",
+      "drafting_team": "Christian McCarryMe",
+      "team_id": 1,
+      "round": 14,
+      "overall_pick": 168,
+      "keeper_status": false
+    },
+    {
+      "player_name": "Bo Nix",
+      "drafting_team": "Christian McCarryMe",
+      "team_id": 1,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Jauan Jennings",
+      "drafting_team": "Christian McCarryMe",
+      "team_id": 1,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Bucky Irving",
+      "drafting_team": "Christian McCarryMe",
+      "team_id": 1,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Tucker Kraft",
+      "drafting_team": "Christian McCarryMe",
+      "team_id": 1,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Chris Boswell",
+      "drafting_team": "Christian McCarryMe",
+      "team_id": 1,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Minnesota",
+      "drafting_team": "Christian McCarryMe",
+      "team_id": 1,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Mike Gesicki",
+      "drafting_team": "A Team with No Tegrity",
+      "team_id": 2,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Jerry Jeudy",
+      "drafting_team": "A Team with No Tegrity",
+      "team_id": 2,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Isaiah Likely",
+      "drafting_team": "A Team with No Tegrity",
+      "team_id": 2,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Matt Gay",
+      "drafting_team": "A Team with No Tegrity",
+      "team_id": 2,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Los Angeles",
+      "drafting_team": "A Team with No Tegrity",
+      "team_id": 2,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Russell Wilson",
+      "drafting_team": "Christian McCarryMe",
+      "team_id": 1,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Kareem Hunt",
+      "drafting_team": "Christian McCarryMe",
+      "team_id": 1,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Jonnu Smith",
+      "drafting_team": "Christian McCarryMe",
+      "team_id": 1,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Quentin Johnston",
+      "drafting_team": "Christian McCarryMe",
+      "team_id": 1,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "DeMario Douglas",
+      "drafting_team": "Christian McCarryMe",
+      "team_id": 1,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Kendre Miller",
+      "drafting_team": "Hawk Tua",
+      "team_id": 11,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Raheem Blackshear",
+      "drafting_team": "Hawk Tua",
+      "team_id": 11,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Tank Bigsby",
+      "drafting_team": "Hawk Tua",
+      "team_id": 11,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Mike Boone",
+      "drafting_team": "Hawk Tua",
+      "team_id": 11,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Philadelphia",
+      "drafting_team": "Hawk Tua",
+      "team_id": 11,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Baker Mayfield",
+      "drafting_team": "No Zay Jose",
+      "team_id": 5,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Hunter Henry",
+      "drafting_team": "No Zay Jose",
+      "team_id": 5,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Cade Otton",
+      "drafting_team": "No Zay Jose",
+      "team_id": 5,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Isaiah Davis",
+      "drafting_team": "No Zay Jose",
+      "team_id": 5,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Ameer Abdullah",
+      "drafting_team": "No Zay Jose",
+      "team_id": 5,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Tyler Bass",
+      "drafting_team": "No Zay Jose",
+      "team_id": 5,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Noah Gray",
+      "drafting_team": "Grit Factory",
+      "team_id": 10,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Braelon Allen",
+      "drafting_team": "Grit Factory",
+      "team_id": 10,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Tyrone Tracy Jr.",
+      "drafting_team": "Deebo Beebo",
+      "team_id": 12,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Jameis Winston",
+      "drafting_team": "Deebo Beebo",
+      "team_id": 12,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Chase McLaughlin",
+      "drafting_team": "Deebo Beebo",
+      "team_id": 12,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Josh Downs",
+      "drafting_team": "Superb Owls",
+      "team_id": 6,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Isaac Guerendo",
+      "drafting_team": "Superb Owls",
+      "team_id": 6,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Indianapolis",
+      "drafting_team": "Superb Owls",
+      "team_id": 6,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Houston",
+      "drafting_team": "Superb Owls",
+      "team_id": 6,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Xavier Legette",
+      "drafting_team": "Garrett Top",
+      "team_id": 8,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Ricky Pearsall",
+      "drafting_team": "Garrett Top",
+      "team_id": 8,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Jake Bates",
+      "drafting_team": "Garrett Top",
+      "team_id": 8,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Denver",
+      "drafting_team": "Garrett Top",
+      "team_id": 8,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Tampa Bay",
+      "drafting_team": "Garrett Top",
+      "team_id": 8,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Rashod Bateman",
+      "drafting_team": "Bidens bidet",
+      "team_id": 4,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Detroit",
+      "drafting_team": "Bidens bidet",
+      "team_id": 4,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Green Bay",
+      "drafting_team": "Bidens bidet",
+      "team_id": 4,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Darnell Mooney",
+      "drafting_team": "CYALTR",
+      "team_id": 9,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Marquez Valdes-Scantling",
+      "drafting_team": "CYALTR",
+      "team_id": 9,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Nick Westbrook-Ikhine",
+      "drafting_team": "CYALTR",
+      "team_id": 9,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Brandon McManus",
+      "drafting_team": "CYALTR",
+      "team_id": 9,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Chig Okonkwo",
+      "drafting_team": "Crazy Rich Achane's",
+      "team_id": 7,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Adam Thielen",
+      "drafting_team": "Crazy Rich Achane's",
+      "team_id": 7,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    },
+    {
+      "player_name": "Will Reichard",
+      "drafting_team": "Crazy Rich Achane's",
+      "team_id": 7,
+      "keeper_status": false,
+      "2025_keeper_eligible": true,
+      "waiver_pickup": true
+    }
+  ]
+}
